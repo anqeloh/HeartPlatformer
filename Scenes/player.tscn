@@ -1,0 +1,97 @@
+[gd_scene load_steps=13 format=3 uid="uid://d0kstsyrpm2b0"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_78pxo"]
+[ext_resource type="Texture2D" uid="uid://cc6r7057gdv65" path="res://Assets/player.png" id="2_jrpk8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vxxv"]
+atlas = ExtResource("2_jrpk8")
+region = Rect2(0, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ln70"]
+atlas = ExtResource("2_jrpk8")
+region = Rect2(144, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_521jg"]
+atlas = ExtResource("2_jrpk8")
+region = Rect2(24, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ut2y"]
+atlas = ExtResource("2_jrpk8")
+region = Rect2(48, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jntgv"]
+atlas = ExtResource("2_jrpk8")
+region = Rect2(72, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ck2yf"]
+atlas = ExtResource("2_jrpk8")
+region = Rect2(96, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skf6o"]
+atlas = ExtResource("2_jrpk8")
+region = Rect2(120, 0, 24, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eu00r"]
+atlas = ExtResource("2_jrpk8")
+region = Rect2(0, 0, 24, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b15sf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vxxv")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ln70")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_521jg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ut2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jntgv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ck2yf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skf6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eu00r")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5iw3"]
+size = Vector2(12, 16)
+
+[node name="Player" type="CharacterBody2D"]
+floor_constant_speed = true
+floor_snap_length = 2.0
+script = ExtResource("1_78pxo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -10)
+sprite_frames = SubResource("SpriteFrames_b15sf")
+animation = &"run"
+frame_progress = 0.912323
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_t5iw3")
