@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dyv1cflyjfxr2"]
 
 [ext_resource type="Texture2D" uid="uid://bcu2fpj5r84t0" path="res://Assets/spikes.png" id="1_x7325"]
-[ext_resource type="PackedScene" uid="uid://dnh6b4heilwfd" path="res://hazard_area.tscn" id="2_0ym6t"]
+[ext_resource type="PackedScene" uid="uid://dnh6b4heilwfd" path="res://Scenes/hazard_area.tscn" id="2_0ym6t"]
 
 [node name="Spikes" type="Node2D"]
 

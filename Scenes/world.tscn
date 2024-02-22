@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_62h40"]
 [ext_resource type="PackedScene" uid="uid://d0kstsyrpm2b0" path="res://Scenes/player.tscn" id="2_282bp"]
-[ext_resource type="PackedScene" uid="uid://dyv1cflyjfxr2" path="res://spikes.tscn" id="3_k7jcg"]
-[ext_resource type="PackedScene" uid="uid://bijpeor1ocrpw" path="res://heart.tscn" id="4_fdm2c"]
-[ext_resource type="PackedScene" uid="uid://na6ucdy15etk" path="res://level_completed.tscn" id="5_1vv2t"]
+[ext_resource type="PackedScene" uid="uid://dyv1cflyjfxr2" path="res://Scenes/spikes.tscn" id="3_k7jcg"]
+[ext_resource type="PackedScene" uid="uid://bijpeor1ocrpw" path="res://Scenes/heart.tscn" id="4_fdm2c"]
+[ext_resource type="PackedScene" uid="uid://na6ucdy15etk" path="res://Scenes/level_completed.tscn" id="5_1vv2t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0rsnj"]
 size = Vector2(23.5165, 64.8702)
